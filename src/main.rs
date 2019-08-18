@@ -5,7 +5,6 @@ use opengl_graphics::GlGraphics;
 use piston::input::{RenderEvent, UpdateEvent, PressEvent, Key, Button};
 use graphics::*;
 use crate::entity::Entity;
-use std::sync::Mutex;
 
 mod entity;
 
