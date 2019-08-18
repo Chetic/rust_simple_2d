@@ -23,9 +23,7 @@ fn main() {
         if let Some(r) = e.render_args() {
             gl.draw(r.viewport(), |c, gl| {
                 clear([0.0, 0.0, 0.0, 1.0], gl);
-                let x = Mutex::new(5);
-                let mut y = x.lock().unwrap();
-                *y += 1;
+
                 for (i, entity) in entities.iter().enumerate() {
                     let transform = c.transform.trans(entity.x, entity.y).rot_rad(entity.rotation).trans(-entity.size / 2.0, -entity.size / 2.0);
                     let r = i as f32 / entities.len() as f32;
